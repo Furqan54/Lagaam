@@ -6,6 +6,9 @@ import Documentaries from './pages/Documentaries.jsx';
 import Podcasts from './pages/Podcasts.jsx';
 import Shorts from './pages/Shorts.jsx';
 import Watch from './pages/Watch.jsx';
+import About from './pages/About.jsx';
+import Support from './pages/Support.jsx';
+import Contact from './pages/Contact.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
@@ -18,6 +21,9 @@ export default function App() {
         <Route path="podcasts" element={<Podcasts />} />
         <Route path="shorts" element={<Shorts />} />
         <Route path="watch/:id" element={<Watch />} />
+        <Route path="about" element={<About />} />
+        <Route path="support" element={<Support />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
