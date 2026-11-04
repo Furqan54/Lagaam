@@ -1,16 +1,19 @@
+import { lazy, Suspense } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { byType, thumb, stats, TOPICS } from '../data/data.js';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Counter from '../components/Counter.jsx';
 import TiltCard from '../components/TiltCard.jsx';
-import HeroScene from '../components/HeroScene.jsx';
 import CtaBand from '../components/CtaBand.jsx';
 import useRail from '../hooks/useRail.js';
 import { RailButtons, RailTrack } from '../components/Rail.jsx';
 import { FeatureCard, MiniCard, VideoCard, ShortCard, EpisodeRow } from '../components/VideoCards.jsx';
 import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
+
+// Three.js is the heaviest dependency, so the 3D hero loads in its own chunk instead of the main bundle.
+const HeroScene = lazy(() => import('../components/HeroScene.jsx'));
 
 const docs = byType('doc');
 const featuredDocs = docs.filter((v) => v.featured);
@@ -41,7 +44,9 @@ export default function Home() {
     <div id="top">
       {/* Three.js ring of real video thumbnails */}
       <section className="hero" id="hero">
-        <HeroScene items={RING_ITEMS} onPick={(v) => navigate(`/watch/${v.id}`)} />
+        <Suspense fallback={<div className="hero-vignette" aria-hidden="true" />}>
+          <HeroScene items={RING_ITEMS} onPick={(v) => navigate(`/watch/${v.id}`)} />
+        </Suspense>
         <div className="hero-copy">
           <span className="pill">Unfiltered. Untold. Unmissable.</span>
           <h1>Stories<br /><span>Pakistan doesn't</span><br />tell.</h1>
