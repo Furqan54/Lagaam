@@ -24,5 +24,8 @@
   "homepage": "https://github.com/Furqan54/Lagaam#readme",
   "devDependencies": {
     "vite": "^7.0.0"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
   }
 }
