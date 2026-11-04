@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcasts — Raftar (Demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body data-page="podcasts">
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="hero-art" data-art="podcast"></div>
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a><i data-icon="right"></i><a href="videos.html">Videos</a><i data-icon="right"></i><span>Podcasts</span></p>
+        <span class="pill">Listen and watch</span>
+        <h1>Raftar Conversations</h1>
+        <p class="lede">Long, honest conversations on the economy, politics and the questions that matter.</p>
+        <div class="hero-actions" style="margin-top:1.6rem">
+          <a class="btn btn-primary" id="playlist" target="_blank" rel="noopener noreferrer"><i data-icon="play"></i> Full playlist <i class="icon-up" data-icon="up"></i></a>
+          <a class="btn btn-secondary" href="#episodes">Jump to episodes <i class="icon-go" data-icon="arrow"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-head reveal"><span class="pill">Latest</span><h2>On the mic right now</h2></header>
+        <div class="podcast-grid" id="podcast"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="episodes">
+      <div class="container">
+        <header class="section-head reveal head-row">
+          <div><span class="pill">All episodes</span><h2>Every conversation</h2></div>
+          <div class="tool-row">
+            <div class="chips" id="topicChips" role="group" aria-label="Topic"></div>
+            <div id="railButtons"></div>
+            <button class="btn btn-secondary btn-sm" id="showAll" type="button" aria-expanded="false">Show all</button>
+          </div>
+        </header>
+        <div id="episodeGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="pill">More on YouTube</span>
+            <h2>Hear it out in full</h2>
+            <p>The full Raftar Conversations playlist has every episode, in order, with new ones added as they are recorded.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" id="playlist2" target="_blank" rel="noopener noreferrer"><i data-icon="youtube"></i> Open the playlist <i class="icon-up" data-icon="up"></i></a>
+            <a class="btn btn-secondary" href="support.html">Support the show <i class="icon-go" data-icon="arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

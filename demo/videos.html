@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Videos — Raftar (Demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body data-page="videos">
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="hero-art" data-art="mix"></div>
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a><i data-icon="right"></i><span>Videos</span></p>
+        <span class="pill">Browse everything</span>
+        <h1>All videos</h1>
+        <p class="lede">Documentaries, podcasts and Shorts in one place. Filter by format and topic, or search by title.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar reveal">
+          <div class="toolbar-row">
+            <div class="segmented" id="typeChips" role="group" aria-label="Format"></div>
+            <label class="search"><i data-icon="search"></i><input id="search" type="search" placeholder="Search titles" aria-label="Search videos"></label>
+          </div>
+          <div class="chips" id="topicChips" role="group" aria-label="Topic"></div>
+        </div>
+        <p class="result-count" id="count"></p>
+        <div class="grid-3" id="results"></div>
+        <div id="shortsBlock" hidden>
+          <div class="subheading">
+            <h2>Shorts</h2>
+            <div id="shortsButtons"></div>
+          </div>
+          <div id="shortsResults"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal"><span class="pill">Browse by topic</span><h2>Pick your obsession</h2><p class="lede">Hover a card to flip it, then jump straight into that topic.</p></header>
+        <div class="flip-grid" id="topics"></div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
