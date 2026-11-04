@@ -17,12 +17,12 @@ const STRIP = {
 
 // Where the centred button goes: after the main content block of each page.
 const CENTER = {
-  videos: ['#shortsBlock', 'Subscribe to Raftar'],
-  documentaries: ['#topicRows', 'Subscribe for new documentaries'],
-  podcasts: ['#episodeGrid', 'Subscribe for new episodes'],
-  shorts: ['#list', 'Subscribe for new Shorts'],
-  about: ['#channels', 'Subscribe to Raftar'],
-  support: ['#ways', 'Subscribe on YouTube'],
+  videos: [['#shortsBlock', 'Subscribe to Raftar']],
+  documentaries: [['#topicRows', 'Subscribe for new documentaries']],
+  podcasts: [['#episodeGrid', 'Subscribe for new episodes']],
+  shorts: [['#list', 'Subscribe for new Shorts']],
+  about: [['#spine', 'Subscribe for every new story'], ['#channels', 'Subscribe to Raftar']],
+  support: [['#ways', 'Subscribe on YouTube']],
 };
 
 // Headings that get a small, quiet button beside them.
@@ -58,10 +58,11 @@ export function injectSubscribe(page) {
   });
 
   // 3. Centred button under the page's main content.
-  const center = CENTER[page];
-  const anchor = center && main.querySelector(center[0]);
-  if (anchor && !anchor.nextElementSibling?.classList.contains('center-cta')) {
-    anchor.insertAdjacentHTML('afterend', `<div class="center-cta reveal">${button(center[1])}</div>`);
+  for (const [selector, label] of CENTER[page] ?? []) {
+    const anchor = main.querySelector(selector);
+    if (anchor && !anchor.nextElementSibling?.classList.contains('center-cta')) {
+      anchor.insertAdjacentHTML('afterend', `<div class="center-cta reveal">${button(label)}</div>`);
+    }
   }
 
   // 4. A small, quiet button next to a key heading.
