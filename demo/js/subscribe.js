@@ -26,7 +26,7 @@ const CENTER = {
 };
 
 // Headings that get a small, quiet button beside them.
-const INLINE = { videos: '#shortsBlock .subheading h2', shorts: '#shorts .head-row h2' };
+const INLINE = { videos: '#shortsBlock .subheading h2' };
 
 const button = (label, cls = 'btn-primary') =>
   `<a class="btn ${cls}" ${attrs}>${icon('youtube')} ${label} <span class="icon-up">${icon('up')}</span></a>`;
