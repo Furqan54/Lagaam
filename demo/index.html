@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raftar — Stories Pakistan Doesn't Tell (Demo)</title>
+  <meta name="description" content="Design demo: a 3D home for Raftar's documentaries, podcasts and Shorts.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <span class="pill">Unfiltered. Untold. Unmissable.</span>
+        <h1>Stories<br><span>Pakistan doesn't</span><br>tell.</h1>
+        <p class="hero-sub">Documentaries, podcasts and Shorts on crime, power, history and the economy, told without the filter.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="videos.html"><i data-icon="play"></i> Start watching <i class="icon-go" data-icon="arrow"></i></a>
+          <a class="btn btn-secondary" href="about.html">About Raftar</a>
+        </div>
+      </div>
+      <div class="hero-tip" id="heroTip" aria-hidden="true"></div>
+      <p class="hero-hint">Move your mouse over the ring. Click a thumbnail to watch.</p>
+    </section>
+
+    <section class="stats" aria-label="Channel numbers"><div class="stats-strip" id="stats"></div></section>
+
+    <div class="marquee-wrap" aria-hidden="true"><div class="marquee"><div class="marquee-track" id="marquee"></div></div></div>
+
+    <section class="sub-strip-wrap">
+      <div class="container">
+        <div class="sub-strip reveal">
+          <span class="sub-strip-icon"><i data-icon="youtube"></i></span>
+          <div class="sub-strip-text">
+            <strong>New stories every week</strong>
+            <span>Join 1.25M subscribers and never miss a documentary.</span>
+          </div>
+          <a class="btn btn-primary" data-sub target="_blank" rel="noopener noreferrer">Subscribe on YouTube <i class="icon-up" data-icon="up"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:clamp(2rem,4vw,3rem)">
+      <div class="container">
+        <header class="section-head reveal head-row">
+          <div><span class="pill">Featured</span><h2>Start with the big ones</h2></div>
+          <a class="btn btn-secondary" href="documentaries.html">All documentaries <i class="icon-go" data-icon="arrow"></i></a>
+        </header>
+        <div class="featured" id="featured"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal"><span class="pill">Explore</span><h2>Choose how you watch</h2></header>
+        <div class="tiles" id="tiles"></div>
+        <div class="center-cta reveal"><a class="btn btn-primary" data-sub target="_blank" rel="noopener noreferrer"><i data-icon="youtube"></i> Subscribe to Raftar <i class="icon-up" data-icon="up"></i></a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-head reveal head-row">
+          <div><span class="pill">Latest documentaries</span><h2>Long-form, no shortcuts</h2></div>
+          <a class="btn btn-secondary" href="documentaries.html">View all <i class="icon-go" data-icon="arrow"></i></a>
+        </header>
+        <div class="grid-3" id="docs"></div>
+        <div class="center-cta reveal"><a class="btn btn-primary" data-sub target="_blank" rel="noopener noreferrer"><i data-icon="youtube"></i> Subscribe for new documentaries <i class="icon-up" data-icon="up"></i></a></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal head-row">
+          <div><span class="pill">Listen and watch</span><h2>Raftar Conversations</h2></div>
+          <a class="btn btn-secondary" href="podcasts.html">All podcasts <i class="icon-go" data-icon="arrow"></i></a>
+        </header>
+        <div class="podcast-grid" id="podcast"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-head reveal head-row">
+          <div>
+            <span class="pill">Fast and focused</span>
+            <div class="head-inline"><h2>Raftar Shorts</h2><a class="btn btn-secondary btn-sm" data-sub target="_blank" rel="noopener noreferrer"><i data-icon="youtube"></i> Subscribe</a></div>
+          </div>
+          <div style="display:flex;gap:.8rem;align-items:center;flex-wrap:wrap">
+            <div id="shortsButtons"></div>
+            <a class="btn btn-secondary" href="shorts.html">All Shorts <i class="icon-go" data-icon="arrow"></i></a>
+          </div>
+        </header>
+        <div id="shorts"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <span class="pill">Raftar Barhnay Do</span>
+            <h2>Keep independent storytelling alive</h2>
+            <p>Join thousands of members on Patreon and help us keep telling the stories nobody else will.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-dark" data-sub target="_blank" rel="noopener noreferrer"><i data-icon="youtube"></i> Subscribe <i class="icon-up" data-icon="up"></i></a>
+            <a class="btn btn-light" href="support.html"><i data-icon="heart"></i> Support Raftar</a>
+            <a class="btn btn-secondary" href="contact.html">Collaborate with us <i class="icon-go" data-icon="arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
