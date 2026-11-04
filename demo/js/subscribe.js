@@ -20,7 +20,6 @@ const CENTER = {
   videos: [['#shortsBlock', 'Subscribe to Raftar']],
   documentaries: [['#topicRows', 'Subscribe for new documentaries']],
   podcasts: [['#episodeGrid', 'Subscribe for new episodes']],
-  shorts: [['#list', 'Subscribe for new Shorts']],
   about: [['#spine', 'Subscribe for every new story'], ['#channels', 'Subscribe to Raftar']],
   support: [['#ways', 'Subscribe on YouTube']],
 };
