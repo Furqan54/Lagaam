@@ -7,6 +7,7 @@ export function init() {
   const featured = docs.filter((v) => v.featured);
 
   document.getElementById('subscribe').href = CHANNEL.url + '?sub_confirmation=1';
+  document.querySelectorAll('[data-sub]').forEach((a) => { a.href = CHANNEL.url + '?sub_confirmation=1'; });
   document.getElementById('featured').innerHTML =
     featureCard(featured[0], 0, { subscribe: true }) +
     `<div class="mini-stack">${featured.slice(1, 4).map((v, i) => miniCard(v, i + 1)).join('')}</div>`;
