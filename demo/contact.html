@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Raftar (Demo)</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body data-page="contact">
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="hero-art" data-art="podcast" data-offset="1"></div>
+      <div class="container">
+        <p class="crumbs"><a href="index.html">Home</a><i data-icon="right"></i><span>Contact</span></p>
+        <span class="pill">Rabta</span>
+        <h1>Collaborate and partner</h1>
+        <p class="lede">Brand partnerships, guest ideas, story tips or feedback: send us a note and the team will take it from there.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <form class="panel form reveal" id="form" novalidate>
+          <h2>Send a message</h2>
+          <div class="form-row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="field">
+            <fieldset>
+              <legend>What is this about?</legend>
+              <div class="topic-chips" id="topics"></div>
+            </fieldset>
+          </div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+          <button class="btn btn-primary" type="submit" style="justify-self:start;padding:1rem 1.8rem"><i data-icon="send"></i> Send message <i class="icon-go" data-icon="arrow"></i></button>
+          <div class="form-ok" id="ok" role="status">Thanks! This is a design demo, so nothing was sent. The real form will email Raftar's team.</div>
+        </form>
+
+        <aside class="info-list reveal" style="--i:1">
+          <div class="panel info-card"><span class="ico"><i data-icon="mail"></i></span><div><h3>Email</h3><a class="plain" id="mail"></a></div></div>
+          <div class="panel info-card"><span class="ico"><i data-icon="users"></i></span><div><h3>Follow Raftar</h3><div class="social-pills" id="socials"></div></div></div>
+          <div class="panel info-card"><span class="ico"><i data-icon="heart"></i></span><div><h3>Support the channel</h3><p>Prefer to help directly? Join us on Patreon.</p><p style="margin-top:.8rem"><a class="btn btn-secondary btn-sm" href="support.html">Support Raftar <i class="icon-go" data-icon="arrow"></i></a></p></div></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
