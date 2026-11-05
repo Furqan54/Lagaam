@@ -26,7 +26,7 @@ export default function HeroScene({ items, onPick }) {
       console.warn('3D hero disabled (no WebGL):', err);
       return undefined; // the page still works without the scene
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setClearColor(0x000000, 0);
 
     const scene = new THREE.Scene();
