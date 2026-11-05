@@ -74,14 +74,14 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 .sub-strip-text strong { font-size: 1.05rem; }
 .sub-strip-text span { color: var(--muted); font-size: .9rem; }
 @media (max-width: 640px) { .sub-strip { flex-wrap: wrap; } .sub-strip .btn { width: 100%; } }
-@media (any-hover: hover) {
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 16px -10px rgba(125,13,67,.6); }
-  .btn-primary:hover::after { transform: translateX(120%) skewX(-20deg); }
-  .btn-secondary:hover { border-color: var(--hot); background: rgba(224,86,140,.1); transform: translateY(-2px); }
-  .btn-light:hover { transform: translateY(-2px); box-shadow: 0 10px 18px -10px rgba(0,0,0,.6); }
-  .btn:hover .icon-go { transform: translateX(4px); }
-  .btn:hover .icon-up { transform: translate(2px, -2px); }
-}
+/* Button hovers are plain :hover rules with no media-query gate. Gating on (hover: hover) made every effect disappear
+   in browsers that report "no hover" even when a mouse is in use. */
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 16px -10px rgba(125,13,67,.6); }
+.btn-primary:hover::after { transform: translateX(120%) skewX(-20deg); }
+.btn-secondary:hover { border-color: var(--hot); background: rgba(224,86,140,.1); transform: translateY(-2px); }
+.btn-light:hover { transform: translateY(-2px); box-shadow: 0 10px 18px -10px rgba(0,0,0,.6); }
+.btn:hover .icon-go { transform: translateX(4px); }
+.btn:hover .icon-up { transform: translate(2px, -2px); }
 .btn:active.btn-primary, .btn:active.btn-secondary { transform: scale(.97); }
 
 /* Section label: a bold, readable pill, nothing decorative inside it */
@@ -105,9 +105,7 @@ html { scrollbar-color: #3a3a44 var(--bg); }
   animation: bob 3.4s ease-in-out infinite; transition: transform .4s var(--ease), box-shadow .3s; }
 .logo-img { display: block; height: 36px; width: auto; }
 @keyframes bob { 0%, 100% { translate: 0 -3px; } 50% { translate: 0 4px; } }
-@media (any-hover: hover) {
-  .brand:hover .logo-plate { animation-play-state: paused; transform: translateY(-2px) rotate(-2deg) scale(1.05); box-shadow: 0 12px 20px -10px rgba(0,0,0,.9); }
-}
+.brand:hover .logo-plate { animation-play-state: paused; transform: translateY(-2px) rotate(-2deg) scale(1.05); box-shadow: 0 12px 20px -10px rgba(0,0,0,.9); }
 .nav-links { position: relative; display: flex; align-items: center; gap: .2rem; margin-left: auto; padding: .3rem; border-radius: 999px; background: rgba(255,255,255,.04); border: 1px solid var(--line); }
 .nav-links > a, .has-sub > a { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: .3rem; padding: .5rem 1rem; border-radius: 999px; font-size: .9rem; font-weight: 600; color: #cfc9c0; transition: color .2s; }
 .nav-links > a:hover, .has-sub > a:hover, .nav-links a.active, .has-sub.active > a { color: #fff; }
