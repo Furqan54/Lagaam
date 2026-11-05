@@ -31,6 +31,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Animated ribbons behind the whole site. Sections that used solid backgrounds are slightly translucent so the waves show through. */
+.wave-bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.55; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 ::selection { background: var(--red); color: #fff; }
 img { max-width: 100%; display: block; }
@@ -130,10 +132,10 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 .nav.menu-open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero (home) ---------- */
-.hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding-bottom: 6.5rem; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 70% 45%, #240a19 0%, var(--bg) 62%); }
+.hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding-bottom: 6.5rem; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 70% 45%, #240a19 0%, rgba(11,11,13,0) 62%); }
 #heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; display: block; }
 .hero-vignette { position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(90deg, rgba(11,11,13,.98) 0%, rgba(11,11,13,.9) 36%, rgba(11,11,13,.25) 58%, transparent 100%), linear-gradient(0deg, var(--bg) 0%, transparent 18%); }
+  background: linear-gradient(90deg, rgba(11,11,13,.8) 0%, rgba(11,11,13,.66) 36%, rgba(11,11,13,.12) 58%, transparent 100%), linear-gradient(0deg, var(--bg) 0%, transparent 18%); }
 .hero-copy { width: min(1320px, 94%); margin-inline: auto; padding-top: 5.5rem; pointer-events: none; }
 .hero-copy > * { pointer-events: auto; max-width: min(46%, 640px); }
 .hero h1 { font-size: clamp(3.4rem, 6.8vw, 6.4rem); line-height: .95; margin-top: 1.1rem; }
@@ -168,7 +170,7 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
-.section-alt { background: var(--bg-2); border-block: 1px solid var(--line); }
+.section-alt { background: rgba(16,16,20,.72); border-block: 1px solid var(--line); }
 .section-head { margin-bottom: 2rem; }
 .section-head h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); margin-top: .9rem; }
 .head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
@@ -176,7 +178,7 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 /* ---------- Inner page hero with video art ---------- */
 /* text and art share one vertical centre line, both clear of the nav bar */
 .page-hero { position: relative; display: flex; align-items: center; padding: 8.5rem 0 3.5rem; min-height: 520px; overflow: hidden; isolation: isolate; border-bottom: 1px solid var(--line);
-  background: radial-gradient(ellipse at 72% 50%, #240a19 0%, var(--bg) 65%); }
+  background: radial-gradient(ellipse at 72% 50%, #240a19 0%, rgba(11,11,13,0) 65%); }
 .page-hero > .container { width: min(var(--max), 92%); }
 .page-hero > .container { position: relative; z-index: 2; }
 .page-hero h1 { font-size: clamp(3rem, 6.5vw, 5.4rem); margin: 1rem 0 0; max-width: 17ch; }
