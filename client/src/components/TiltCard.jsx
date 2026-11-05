@@ -4,7 +4,9 @@ import { getVideo, previewRange } from '../data/data.js';
 /** Lets a card's thumbnail know when to show the hover preview iframe. */
 export const CardContext = createContext({ frameSrc: null, onFrameLoad: () => {} });
 
-const canHover = () => typeof matchMedia !== 'undefined' && matchMedia('(hover: hover)').matches;
+// "any-hover": true when at least one connected input (mouse, trackpad) can hover. The stricter "hover: hover"
+// only looks at the primary input, which touchscreen laptops and some browsers report as non-hovering.
+const canHover = () => typeof matchMedia !== 'undefined' && matchMedia('(any-hover: hover)').matches;
 const prefersReducedMotion = () => typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
