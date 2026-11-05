@@ -12,6 +12,12 @@ npm run dev      # http://localhost:5180
 npm run build    # production build into dist/
 ```
 
+## Deploying to Vercel
+
+- Import the repo, set **Root Directory** to `client`, preset **Vite** (build `npm run build`, output `dist`).
+- `vercel.json` sends every route to `index.html`, so refreshing on `/videos` or `/about` works.
+- The demo lives on the `demo/raftar-3d-theme` branch. `main` is the original Lagaam landing page and stays as it is.
+
 ## Pages
 
 | Route | Page |
