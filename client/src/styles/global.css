@@ -536,7 +536,9 @@ details p { margin: 0 0 1.2rem; color: var(--muted); }
   .stat { flex: 1 1 45%; justify-content: center; }
   .art-cluster { --pw: 190px; }
 }
+/* Reduced motion: stop the looping animations (marquee, floating logo, gradient borders) and the scroll reveal travel.
+   Hover feedback stays, because buttons and cards that look dead on hover read as broken. The card tilt is turned off in JS. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+  *, *::before, *::after { animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
