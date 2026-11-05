@@ -59,9 +59,8 @@ export default function Header() {
   return (
     <header className={`nav${scrolled ? ' scrolled' : ''}${open ? ' menu-open' : ''}`}>
       <div className="nav-inner">
-        <Link className="brand" to="/" aria-label="Raftar home">
+        <Link className="brand" to="/" aria-label="Lagaam home">
           <Logo />
-          <span className="brand-word">RAFTAR</span>
         </Link>
 
         <button className="menu-btn" type="button" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>

@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <Link className="brand" to="/"><Logo /><span className="brand-word">RAFTAR</span></Link>
+            <Link className="brand" to="/" aria-label="Lagaam home"><Logo /></Link>
             <p className="footer-blurb">Unfiltered stories on crime, power, history and the economy. Barhnay do.</p>
             <p className="footer-mail">Collaborate: <a href={`mailto:${CHANNEL.email}`}>{CHANNEL.email}</a></p>
           </div>
