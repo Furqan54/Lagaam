@@ -4,9 +4,9 @@ import { getVideo, previewRange } from '../data/data.js';
 /** Lets a card's thumbnail know when to show the hover preview iframe. */
 export const CardContext = createContext({ frameSrc: null, onFrameLoad: () => {} });
 
-// "any-hover": true when at least one connected input (mouse, trackpad) can hover. The stricter "hover: hover"
-// only looks at the primary input, which touchscreen laptops and some browsers report as non-hovering.
-const canHover = () => typeof matchMedia !== 'undefined' && matchMedia('(any-hover: hover)').matches;
+// Whether to react is decided by the real input of each event (a mouse or pen, never a finger), not by the hover
+// media queries. Some browsers report "no hover" even with a mouse attached, which used to switch every card effect off.
+const isTouch = (e) => e.pointerType === 'touch';
 const prefersReducedMotion = () => typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /**
@@ -25,14 +25,16 @@ export default function TiltCard({ as: Tag = 'div', max = 8, previewId, classNam
 
   const setVar = (name, value) => ref.current?.style.setProperty(name, value);
 
-  const onEnter = () => {
-    if (!canHover()) return; // touch devices: tapping just opens the video page
+  const onEnter = (e) => {
+    if (isTouch(e)) return; // a finger tap just opens the video page
     setHover(true);
     if (previewId) timer.current = setTimeout(() => setFrame(true), 450);
   };
 
   const onMove = (e) => {
-    if (!canHover() || !ref.current) return;
+    if (isTouch(e) || !ref.current) return;
+    // The pointer may have entered before React attached its handlers (page load under the cursor), so make sure the hover state is on.
+    setHover(true);
     const r = ref.current.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width;
     const py = (e.clientY - r.top) / r.height;
