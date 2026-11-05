@@ -17,6 +17,10 @@ function Media({ v, small = false }) {
       </div>
       <span className="play" aria-hidden="true"><Icon name="play" /></span>
       {v.type === 'short' && <span className="badge">Short</span>}
+      {/* podcasts get a live equalizer, so audio content reads as audio at a glance */}
+      {v.type === 'podcast' && (
+        <span className="eq" aria-hidden="true"><i /><i /><i /><i /><i /></span>
+      )}
     </div>
   );
 }

@@ -65,7 +65,7 @@ export default function TiltCard({ as: Tag = 'div', max = 8, previewId, classNam
     <CardContext.Provider value={{ frameSrc, onFrameLoad: () => setPlaying(true) }}>
       <Tag
         ref={ref}
-        className={`card tilt ${className} ${hover ? 'is-hover' : ''} ${playing ? 'is-previewing' : ''}`}
+        className={`card tilt ${className} ${hover ? 'is-hover' : ''} ${playing ? 'is-previewing' : ''} ${frame && !playing ? 'is-loading' : ''}`}
         onPointerEnter={onEnter}
         onPointerMove={onMove}
         onPointerLeave={onLeave}
