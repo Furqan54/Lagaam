@@ -206,8 +206,13 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 @keyframes drift { to { translate: 0 -14px; } }
 
 /* ---------- Reveal ---------- */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .7s var(--ease); transition-delay: calc(var(--i, 0) * 70ms); }
-.reveal.in { opacity: 1; transform: none; }
+/* Entrance: blurred and small, then lifts, sharpens and scales up. Siblings arrive one after another (--i). */
+.reveal { opacity: 0; transform: translateY(46px) scale(.94); filter: blur(10px);
+  transition: opacity .7s ease, transform .95s var(--ease), filter .7s ease; transition-delay: calc(var(--i, 0) * 100ms); will-change: transform, opacity; }
+.reveal.in { opacity: 1; transform: none; filter: none; will-change: auto; }
+/* cards that arrive from the side of a row, for variety */
+.grid-3 > .reveal:nth-child(3n + 1), .featured > .reveal:first-child { transform-origin: left center; }
+.grid-3 > .reveal:nth-child(3n) { transform-origin: right center; }
 
 /* ============================================================
    3D TILT CARDS (JS sets --rx --ry --mx --my as unitless numbers)
@@ -540,5 +545,5 @@ details p { margin: 0 0 1.2rem; color: var(--muted); }
    Hover feedback stays, because buttons and cards that look dead on hover read as broken. The card tilt is turned off in JS. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  .reveal { opacity: 1; transform: none; filter: none; }
 }
