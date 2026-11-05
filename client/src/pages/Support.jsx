@@ -3,6 +3,7 @@ import { CHANNEL } from '../data/data.js';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import TiltCard from '../components/TiltCard.jsx';
+import { DecodeNumber } from '../components/Counter.jsx';
 import PageHero from '../components/PageHero.jsx';
 import CtaBand from '../components/CtaBand.jsx';
 import { SUBSCRIBE_HREF, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
@@ -55,7 +56,7 @@ export default function Support() {
                 <TiltCard className={`tier ${t.top ? 'top' : ''}`} max={6}>
                   {t.top && <span className="tag tier-tag">Most popular</span>}
                   <h3>{t.name}</h3>
-                  <div className="price">{t.price}<small> / month</small></div>
+                  <div className="price"><DecodeNumber as="span" text={t.price} /><small> / month</small></div>
                   <ul>
                     {t.perks.map((p) => <li key={p}><Icon name="check" /><span>{p}</span></li>)}
                   </ul>
