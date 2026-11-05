@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import WaveBackground from './WaveBackground.jsx';
+import useTextDecode from '../hooks/useTextDecode.js';
 
 /** New page = back to the top (instant, ignoring the smooth-scroll setting). */
 function ScrollToTop() {
@@ -15,6 +16,8 @@ function ScrollToTop() {
 
 /** The shell every page lives in: header, the page itself, footer. */
 export default function Layout() {
+  const { pathname } = useLocation();
+  useTextDecode(pathname);
   return (
     <>
       <ScrollToTop />
