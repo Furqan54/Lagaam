@@ -37,7 +37,7 @@ function TopicRow({ topic, list }) {
 }
 
 export default function Documentaries() {
-  useTitle('Documentaries — Raftar');
+  useTitle('Documentaries — Lagaam');
   const rows = TOPICS.map((t) => ({ t, list: docs.filter((v) => v.topic === t) })).filter((r) => r.list.length);
 
   return (
@@ -83,7 +83,7 @@ export default function Documentaries() {
       <CtaBand
         pill="Never miss one"
         title="New documentaries, first"
-        text="Subscribe on YouTube so every new Raftar documentary lands in your feed the moment it is published."
+        text="Subscribe on YouTube so every new Lagaam documentary lands in your feed the moment it is published."
       >
         <SubscribeButton variant="btn-light" label="Subscribe" />
       </CtaBand>

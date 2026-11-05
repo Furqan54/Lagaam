@@ -19,7 +19,7 @@ const SOCIALS = [
 ];
 
 export default function Contact() {
-  useTitle('Contact — Raftar');
+  useTitle('Contact — Lagaam');
   const [form, setForm] = useState(empty);
   const [sent, setSent] = useState(false);
 
@@ -44,7 +44,7 @@ export default function Contact() {
         title="Collaborate and partner"
         lede="Brand partnerships, guest ideas, story tips or feedback: send us a note and the team will take it from there."
       />
-      <SubscribeStrip title="Stay in the loop" text="Subscribe to see what Raftar publishes next." />
+      <SubscribeStrip title="Stay in the loop" text="Subscribe to see what Lagaam publishes next." />
 
       <section className="section">
         <div className="container contact-grid">
@@ -81,7 +81,7 @@ export default function Contact() {
               <Icon name="send" /> Send message <span className="icon-go"><Icon name="arrow" /></span>
             </button>
             <div className={`form-ok ${sent ? 'show' : ''}`} role="status">
-              Thanks! This is a design demo, so nothing was sent. The real form will email Raftar's team.
+              Thanks! This is a design demo, so nothing was sent. The real form will email Lagaam's team.
             </div>
           </Reveal>
 
@@ -93,7 +93,7 @@ export default function Contact() {
             <div className="panel info-card">
               <span className="ico"><Icon name="users" /></span>
               <div>
-                <h3>Follow Raftar</h3>
+                <h3>Follow Lagaam</h3>
                 <div className="social-pills">
                   {SOCIALS.map(([name, icon, href]) => (
                     <a key={name} href={href} target="_blank" rel="noopener noreferrer"><Icon name={icon} />{name}</a>
@@ -107,7 +107,7 @@ export default function Contact() {
                 <h3>Support the channel</h3>
                 <p>Prefer to help directly? Join us on Patreon.</p>
                 <p style={{ marginTop: '.8rem' }}>
-                  <Link className="btn btn-secondary btn-sm" to="/support">Support Raftar <span className="icon-go"><Icon name="arrow" /></span></Link>
+                  <Link className="btn btn-secondary btn-sm" to="/support">Support Lagaam <span className="icon-go"><Icon name="arrow" /></span></Link>
                 </p>
               </div>
             </div>

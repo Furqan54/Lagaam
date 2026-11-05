@@ -3,7 +3,7 @@ import Icon from '../components/Icon.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 export default function NotFound() {
-  useTitle('Page not found — Raftar');
+  useTitle('Page not found — Lagaam');
   return (
     <section className="section" style={{ paddingTop: '10rem' }}>
       <div className="container">

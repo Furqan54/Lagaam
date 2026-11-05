@@ -15,7 +15,7 @@ const shorts = byType('short');
 const topics = ['all', ...TOPICS.filter((t) => shorts.some((s) => s.topic === t))];
 
 export default function Shorts() {
-  useTitle('Shorts — Raftar');
+  useTitle('Shorts — Lagaam');
   // One section: topic chips filter a carousel, and "Show all" turns it into a grid.
   const [topic, setTopic] = useState('all');
   const [showAll, setShowAll] = useState(false);
@@ -29,7 +29,7 @@ export default function Shorts() {
         offset={1}
         crumbs={[{ label: 'Videos', to: '/videos' }, { label: 'Shorts' }]}
         pill="Fast and focused"
-        title="Raftar Shorts"
+        title="Lagaam Shorts"
         lede="Truth in 60 seconds. Short-form stories built for quick discovery."
       >
         <a className="btn btn-primary" href={CHANNEL.shortsUrl} target="_blank" rel="noopener noreferrer"><Icon name="phone" /> Every Short on YouTube <span className="icon-up"><Icon name="up" /></span></a>

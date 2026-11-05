@@ -39,7 +39,7 @@ const PLATFORMS = [
 const MAX_SUBS = Math.max(...sisterChannels.map((c) => parseFloat(c.subs)));
 
 export default function About() {
-  useTitle('About — Raftar');
+  useTitle('About — Lagaam');
 
   return (
     <>
@@ -54,7 +54,7 @@ export default function About() {
         <Link className="btn btn-primary" to="/documentaries"><Icon name="play" /> Watch our work <span className="icon-go"><Icon name="arrow" /></span></Link>
         <Link className="btn btn-secondary" to="/contact">Get in touch <span className="icon-go"><Icon name="arrow" /></span></Link>
       </PageHero>
-      <SubscribeStrip title="Be part of the story" text="Join 1.25M people who watch Raftar." />
+      <SubscribeStrip title="Be part of the story" text="Join 1.25M people who watch Lagaam." />
 
       <section className="section">
         <div className="container mission">
@@ -62,7 +62,7 @@ export default function About() {
             <div className="mesh" />
             <span className="pill">Our mission</span>
             <h2>Catalysts for progress</h2>
-            <p>Raftar provides up-to-date and unconventional content that sparks curiosity and inspires change. We believe knowledge is a key driver of transformation, and we are committed to bringing it to your screens.</p>
+            <p>Lagaam provides up-to-date and unconventional content that sparks curiosity and inspires change. We believe knowledge is a key driver of transformation, and we are committed to bringing it to your screens.</p>
             <p>We simplify complex issues, challenge the status quo and ignite the spark of change in society: one idea, one video, one click at a time.</p>
           </Reveal>
           <Reveal className="glow-panel" i={1}>
@@ -85,7 +85,7 @@ export default function About() {
           <Reveal as="header" className="section-head">
             <span className="pill">What we cover</span>
             <h2>Stories with a spine</h2>
-            <p className="lede">Three ways Raftar tells a story, each with its own pace and its own kind of depth.</p>
+            <p className="lede">Three ways Lagaam tells a story, each with its own pace and its own kind of depth.</p>
           </Reveal>
           <div className="spine" id="spine">
             {SPINE.map((r, i) => (
@@ -110,7 +110,7 @@ export default function About() {
 
       <section className="section">
         <div className="container">
-          <Reveal as="header" className="section-head"><span className="pill">Find us</span><h2>Raftar everywhere</h2></Reveal>
+          <Reveal as="header" className="section-head"><span className="pill">Find us</span><h2>Lagaam everywhere</h2></Reveal>
           <div className="platforms">
             {PLATFORMS.map((p, i) => (
               <Reveal className="tilt-scene" i={i} key={p.icon}>
@@ -129,9 +129,9 @@ export default function About() {
       <section className="section section-alt">
         <div className="container">
           <Reveal as="header" className="section-head">
-            <span className="pill">The Raftar family</span>
+            <span className="pill">The Lagaam family</span>
             <h2>Our other channels</h2>
-            <p className="lede">Beyond the main channel, Raftar runs sister channels for clips, conversations and sport.</p>
+            <p className="lede">Beyond the main channel, Lagaam runs sister channels for clips, conversations and sport.</p>
           </Reveal>
           <div className="channels" id="channels">
             {sisterChannels.map((c, i) => {
@@ -149,7 +149,7 @@ export default function About() {
               );
             })}
           </div>
-          <CenterCta label="Subscribe to Raftar" />
+          <CenterCta label="Subscribe to Lagaam" />
           <p className="note">Channel names and subscriber counts are from the public YouTube page. The bars compare the sister channels with each other.</p>
         </div>
       </section>
@@ -160,7 +160,7 @@ export default function About() {
         text="Subscribe, support on Patreon, or reach out to collaborate. Every bit helps us tell more."
       >
         <SubscribeButton variant="btn-dark" label="Subscribe" />
-        <Link className="btn btn-light" to="/support"><Icon name="heart" /> Support Raftar</Link>
+        <Link className="btn btn-light" to="/support"><Icon name="heart" /> Support Lagaam</Link>
         <Link className="btn btn-secondary" to="/contact">Collaborate <span className="icon-go"><Icon name="arrow" /></span></Link>
       </CtaBand>
     </>

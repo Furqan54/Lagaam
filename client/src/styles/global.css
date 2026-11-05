@@ -1,5 +1,5 @@
 /* ============================================================
-   Raftar demo theme v3: dark, taken from the channel logo
+   Lagaam demo theme v3: dark, taken from the channel logo
    (black disc, red-to-orange swoosh). One accent family,
    offset shadows, real icons, calm card typography.
    ============================================================ */
@@ -355,7 +355,7 @@ html { scrollbar-color: #3a3a44 var(--bg); }
 
 /* ---------- CTA band ---------- */
 .cta-band { position: relative; overflow: hidden; border-radius: 26px; padding: clamp(2rem, 5vw, 3.8rem); display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: center; background: var(--grad); }
-.cta-band::after { content: 'RAFTAR'; position: absolute; right: -2%; bottom: -24%; font-family: var(--display); font-size: clamp(8rem, 20vw, 16rem); color: rgba(11,11,13,.14); line-height: .8; pointer-events: none; }
+.cta-band::after { content: 'LAGAAM'; position: absolute; right: -2%; bottom: -24%; font-family: var(--display); font-size: clamp(8rem, 20vw, 16rem); color: rgba(11,11,13,.14); line-height: .8; pointer-events: none; }
 .cta-band .pill { background: rgba(11,11,13,.22); border-color: rgba(255,255,255,.4); color: #fff; }
 .cta-band h2 { font-size: clamp(2.4rem, 5vw, 4rem); margin-top: .9rem; }
 .cta-band p { color: rgba(255,255,255,.92); max-width: 48ch; }

@@ -8,7 +8,7 @@ const external = { target: '_blank', rel: 'noopener noreferrer' };
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-watermark" aria-hidden="true">RAFTAR</div>
+      <div className="footer-watermark" aria-hidden="true">LAGAAM</div>
       <div className="container">
         <div className="footer-grid">
           <div>
@@ -24,7 +24,7 @@ export default function Footer() {
             <Link to="/shorts">Shorts</Link>
           </div>
           <div>
-            <h4>Raftar</h4>
+            <h4>Lagaam</h4>
             <Link to="/about">About</Link>
             <Link to="/support">Support us</Link>
             <Link to="/contact">Contact</Link>

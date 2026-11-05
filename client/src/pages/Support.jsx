@@ -29,7 +29,7 @@ const FAQ = [
 ];
 
 export default function Support() {
-  useTitle('Support Raftar');
+  useTitle('Support Lagaam');
 
   return (
     <>
@@ -37,9 +37,9 @@ export default function Support() {
         art="doc"
         offset={1}
         crumbs={[{ label: 'Support' }]}
-        pill="Raftar Barhnay Do"
+        pill="Lagaam Barhnay Do"
         title="Keep independent storytelling alive"
-        lede="8,865 members already back Raftar on Patreon, from $3 a month. Members get exclusive posts and a place in the community."
+        lede="8,865 members already back Lagaam on Patreon, from $3 a month. Members get exclusive posts and a place in the community."
       >
         <a className="btn btn-primary" href={CHANNEL.patreon} {...external}><Icon name="patreon" /> Join on Patreon <span className="icon-up"><Icon name="up" /></span></a>
         <a className="btn btn-secondary" href="#tiers">See membership ideas <span className="icon-go"><Icon name="arrow" /></span></a>
@@ -86,7 +86,7 @@ export default function Support() {
               <TiltCard className="way" max={6}>
                 <span className="ico"><Icon name="share" /></span>
                 <h3>Share</h3>
-                <p>Send a documentary to someone who should see it. Word of mouth is how Raftar grew.</p>
+                <p>Send a documentary to someone who should see it. Word of mouth is how Lagaam grew.</p>
                 <Link className="btn btn-secondary btn-sm" to="/videos">Pick a video <span className="icon-go"><Icon name="arrow" /></span></Link>
               </TiltCard>
             </Reveal>
@@ -118,9 +118,9 @@ export default function Support() {
       </section>
 
       <CtaBand
-        pill="Raftar Barhnay Do"
+        pill="Lagaam Barhnay Do"
         title="Stories need people like you"
-        text="Back the channel on Patreon, or start by subscribing. Either way, you are part of what keeps Raftar independent."
+        text="Back the channel on Patreon, or start by subscribing. Either way, you are part of what keeps Lagaam independent."
       >
         <a className="btn btn-light" href={CHANNEL.patreon} {...external}><Icon name="heart" /> Become a member <span className="icon-up"><Icon name="up" /></span></a>
         <a className="btn btn-secondary" href={SUBSCRIBE_HREF} {...external}>Subscribe free <span className="icon-up"><Icon name="up" /></span></a>

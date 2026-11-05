@@ -2,7 +2,8 @@
 // (synced from the YouTube Data API). Shapes mirror the future "Video" model.
 
 export const CHANNEL = {
-  name: 'Raftar',
+  name: 'Lagaam',
+  // The handle, links and email below are the channel's real addresses, so they keep their original names.
   handle: '@raftartv',
   url: 'https://www.youtube.com/@raftartv',
   playlistPodcasts: 'https://www.youtube.com/watch?v=2UfAuXsUMa8&list=PLjWgMIYQKySN4bgMrGT4ZNKiBFfrCJuy8',
@@ -28,7 +29,7 @@ export const PREVIEW_SECONDS = { doc: 45, podcast: 45, short: 15 };
 export const previewRange = (v) => v.preview ?? [0, PREVIEW_SECONDS[v.type] ?? 45];
 export const TOPICS = ['Politics', 'History', 'Economy', 'Society', 'Karachi'];
 
-const GENERIC = 'Watch the full story on Raftar.';
+const GENERIC = 'Watch the full story on Lagaam.';
 
 export const videos = [
   // ---- Documentaries ----

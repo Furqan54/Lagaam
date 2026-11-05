@@ -1,9 +1,9 @@
 {
-  "name": "raftar-client",
+  "name": "lagaam-client",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Raftar website front end (React). The Express + MongoDB side of the MERN stack comes later.",
+  "description": "Lagaam website front end (React). The Express + MongoDB side of the MERN stack comes later.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -27,7 +27,7 @@ const loadYT = () => {
 };
 
 function NotFoundVideo() {
-  useTitle('Video not found — Raftar');
+  useTitle('Video not found — Lagaam');
   return (
     <div className="watch-wrap">
       <div className="container">
@@ -48,7 +48,7 @@ export default function Watch() {
 }
 
 function WatchVideo({ v }) {
-  useTitle(`${v.title} — Raftar`);
+  useTitle(`${v.title} — Lagaam`);
   const [start, end] = previewRange(v);
   const mount = useRef(null);
   const player = useRef(null);
@@ -114,7 +114,7 @@ function WatchVideo({ v }) {
               {ended && (
                 <div className="player-end">
                   <strong>That was the intro.</strong>
-                  <p>Watch the full {TYPE_LABEL[v.type].toLowerCase()} on Raftar's YouTube channel.</p>
+                  <p>Watch the full {TYPE_LABEL[v.type].toLowerCase()} on Lagaam's YouTube channel.</p>
                   <div className="watch-actions" style={{ justifyContent: 'center' }}>
                     <a className="btn btn-primary" href={youtubeUrl(v)} target="_blank" rel="noopener noreferrer">
                       <Icon name="youtube" /> Watch the full video <span className="icon-up"><Icon name="up" /></span>

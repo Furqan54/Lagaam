@@ -16,7 +16,7 @@ const topics = ['all', ...TOPICS.filter((t) => pods.some((p) => p.topic === t))]
 const external = { target: '_blank', rel: 'noopener noreferrer' };
 
 export default function Podcasts() {
-  useTitle('Podcasts — Raftar');
+  useTitle('Podcasts — Lagaam');
   // Episodes are a carousel by default and a grid when "Show all" is on. Topic chips filter either one.
   const [topic, setTopic] = useState('all');
   const [showAll, setShowAll] = useState(false);
@@ -29,13 +29,13 @@ export default function Podcasts() {
         art="podcast"
         crumbs={[{ label: 'Videos', to: '/videos' }, { label: 'Podcasts' }]}
         pill="Listen and watch"
-        title="Raftar Conversations"
+        title="Lagaam Conversations"
         lede="Long, honest conversations on the economy, politics and the questions that matter."
       >
         <a className="btn btn-primary" href={CHANNEL.playlistPodcasts} {...external}><Icon name="play" /> Full playlist <span className="icon-up"><Icon name="up" /></span></a>
         <a className="btn btn-secondary" href="#episodes">Jump to episodes <span className="icon-go"><Icon name="arrow" /></span></a>
       </PageHero>
-      <SubscribeStrip title="Every conversation, in your feed" text="Subscribe so new Raftar Conversations reach you first." />
+      <SubscribeStrip title="Every conversation, in your feed" text="Subscribe so new Lagaam Conversations reach you first." />
 
       <section className="section">
         <div className="container">
@@ -81,7 +81,7 @@ export default function Podcasts() {
       <CtaBand
         pill="More on YouTube"
         title="Hear it out in full"
-        text="The full Raftar Conversations playlist has every episode, in order, with new ones added as they are recorded."
+        text="The full Lagaam Conversations playlist has every episode, in order, with new ones added as they are recorded."
       >
         <SubscribeButton variant="btn-dark" label="Subscribe" />
         <a className="btn btn-light" href={CHANNEL.playlistPodcasts} {...external}><Icon name="youtube" /> Open the playlist <span className="icon-up"><Icon name="up" /></span></a>

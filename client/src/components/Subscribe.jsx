@@ -29,7 +29,7 @@ export function SubscribeStrip({ title, text }) {
 }
 
 /** Centred Subscribe button under a block of content. */
-export function CenterCta({ label = 'Subscribe to Raftar' }) {
+export function CenterCta({ label = 'Subscribe to Lagaam' }) {
   return (
     <Reveal className="center-cta">
       <SubscribeButton label={label} />

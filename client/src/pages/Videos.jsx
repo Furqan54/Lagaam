@@ -12,7 +12,7 @@ import useTitle from '../hooks/useTitle.js';
 const TYPES = [['all', 'All'], ['doc', 'Documentaries'], ['podcast', 'Podcasts'], ['short', 'Shorts']];
 
 export default function Videos() {
-  useTitle('All Videos — Raftar');
+  useTitle('All Videos — Lagaam');
   const [params, setParams] = useSearchParams();
 
   // Filters live in the URL, so a filtered view can be shared or bookmarked.
@@ -92,7 +92,7 @@ export default function Videos() {
               </RailTrack>
             </div>
           )}
-          <CenterCta label="Subscribe to Raftar" />
+          <CenterCta label="Subscribe to Lagaam" />
         </div>
       </section>
 

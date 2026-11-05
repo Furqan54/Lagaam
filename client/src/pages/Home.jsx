@@ -36,7 +36,7 @@ const TILES = [
 const GoArrow = () => <span className="icon-go"><Icon name="arrow" /></span>;
 
 export default function Home() {
-  useTitle("Raftar — Stories Pakistan Doesn't Tell");
+  useTitle("Lagaam — Stories Pakistan Doesn't Tell");
   const navigate = useNavigate();
   const shortsRail = useRail();
 
@@ -53,7 +53,7 @@ export default function Home() {
           <p className="hero-sub">Documentaries, podcasts and Shorts on crime, power, history and the economy, told without the filter.</p>
           <div className="hero-actions">
             <Link className="btn btn-primary" to="/videos"><Icon name="play" /> Start watching <GoArrow /></Link>
-            <Link className="btn btn-secondary" to="/about">About Raftar</Link>
+            <Link className="btn btn-secondary" to="/about">About Lagaam</Link>
           </div>
         </div>
         <p className="hero-hint">Move your mouse over the ring. Click a thumbnail to watch.</p>
@@ -116,7 +116,7 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <CenterCta label="Subscribe to Raftar" />
+          <CenterCta label="Subscribe to Lagaam" />
         </div>
       </section>
 
@@ -136,7 +136,7 @@ export default function Home() {
       <section className="section section-alt">
         <div className="container">
           <Reveal as="header" className="section-head head-row">
-            <div><span className="pill">Listen and watch</span><h2>Raftar Conversations</h2></div>
+            <div><span className="pill">Listen and watch</span><h2>Lagaam Conversations</h2></div>
             <Link className="btn btn-secondary" to="/podcasts">All podcasts <GoArrow /></Link>
           </Reveal>
           <div className="podcast-grid">
@@ -154,7 +154,7 @@ export default function Home() {
             <div>
               <span className="pill">Fast and focused</span>
               <div className="head-inline">
-                <h2>Raftar Shorts</h2>
+                <h2>Lagaam Shorts</h2>
                 <SubscribeButton variant="btn-secondary" small arrow={false} />
               </div>
             </div>
@@ -170,12 +170,12 @@ export default function Home() {
       </section>
 
       <CtaBand
-        pill="Raftar Barhnay Do"
+        pill="Lagaam Barhnay Do"
         title="Keep independent storytelling alive"
         text="Join thousands of members on Patreon and help us keep telling the stories nobody else will."
       >
         <SubscribeButton variant="btn-dark" label="Subscribe" />
-        <Link className="btn btn-light" to="/support"><Icon name="heart" /> Support Raftar</Link>
+        <Link className="btn btn-light" to="/support"><Icon name="heart" /> Support Lagaam</Link>
         <Link className="btn btn-secondary" to="/contact">Collaborate with us <GoArrow /></Link>
       </CtaBand>
     </div>
