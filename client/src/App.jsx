@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
+import Intro from './components/Intro.jsx';
 import Home from './pages/Home.jsx';
 import Videos from './pages/Videos.jsx';
 import Documentaries from './pages/Documentaries.jsx';
@@ -13,6 +14,8 @@ import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
   return (
+    <>
+    <Intro />
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
@@ -27,5 +30,6 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
+    </>
   );
 }

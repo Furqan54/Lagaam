@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { intro } from '../lib/intro.js';
 
 /** Fades and lifts its content in the first time it scrolls into view. `i` staggers siblings. */
 export default function Reveal({ as: Tag = 'div', i = 0, className = '', style, children, ...rest }) {
@@ -12,14 +13,20 @@ export default function Reveal({ as: Tag = 'div', i = 0, className = '', style, 
       setShown(true);
       return undefined;
     }
-    const io = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShown(true);
-        io.disconnect();
-      }
-    }, { threshold: 0.1 });
-    io.observe(el);
-    return () => io.disconnect();
+    let io;
+    let cancelled = false;
+    // wait for the loading intro to lift so the entrance is actually seen
+    intro.done.then(() => {
+      if (cancelled) return;
+      io = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          setShown(true);
+          io.disconnect();
+        }
+      }, { threshold: 0.1 });
+      io.observe(el);
+    });
+    return () => { cancelled = true; io?.disconnect(); };
   }, []);
 
   return (
