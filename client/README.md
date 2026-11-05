@@ -1,6 +1,6 @@
-# Raftar client (React)
+# Lagaam client (React)
 
-Front end of the Raftar website: React 19, React Router, Vite and Three.js (the 3D hero).
+Front end of the Lagaam website: React 19, React Router, Vite and Three.js (the 3D hero).
 The Express + MongoDB side of the MERN stack will live in a `server/` folder next to this one.
 
 ## Run it
@@ -38,5 +38,7 @@ npm run build    # production build into dist/
 ## Notes
 
 - Videos only play an intro (first 45 seconds, 15 for Shorts). Change it per video with `preview: [start, end]` in `data.js`.
-- The logo is a stand-in until the official Raftar file is available.
+- The logo is `src/assets/lagaam-logo.png`, cropped from the original in the repo's `assets/` folder. The artwork is dark burgundy, so it sits on a white plate on the dark theme.
+- The colour scheme comes from the logo (burgundy `#650a34`). The tokens are at the top of `global.css`.
+- The YouTube handle, social links and contact email in `data.js` are the channel's real addresses, so they still say raftar.
 - The membership tiers on the Support page are placeholders.
