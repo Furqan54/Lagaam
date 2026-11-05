@@ -76,6 +76,12 @@ export default function About() {
                 </div>
               ))}
             </div>
+            {/* decorative bar chart that breathes, like the dashboard bars in the reference */}
+            <div className="bars" aria-hidden="true">
+              {Array.from({ length: 20 }, (_, i) => (
+                <i key={i} style={{ '--d': `${(i * 0.13).toFixed(2)}s`, '--h': `${34 + ((i * 41) % 62)}%` }} />
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>
