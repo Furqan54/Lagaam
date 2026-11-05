@@ -61,7 +61,7 @@ export default function HeroScene({ items, onPick }) {
 
       const mat = new THREE.MeshBasicMaterial({ color: 0x23232b, side: THREE.DoubleSide });
       const mesh = new THREE.Mesh(planeGeo, mat);
-      const frameMat = new THREE.MeshBasicMaterial({ color: 0xe5301f, side: THREE.DoubleSide, transparent: true, opacity: 0.85 });
+      const frameMat = new THREE.MeshBasicMaterial({ color: 0x8f1148, side: THREE.DoubleSide, transparent: true, opacity: 0.85 });
       const frame = new THREE.Mesh(frameGeo, frameMat);
       frame.position.z = -0.02;
       pivot.add(frame, mesh);
@@ -89,18 +89,18 @@ export default function HeroScene({ items, onPick }) {
 
     /* ---- Centre knot and glow ---- */
     const knotGeo = new THREE.TorusKnotGeometry(1.15, 0.34, 180, 24);
-    const knot = new THREE.Mesh(knotGeo, new THREE.MeshBasicMaterial({ color: 0xe5301f, wireframe: true, transparent: true, opacity: 0.55 }));
+    const knot = new THREE.Mesh(knotGeo, new THREE.MeshBasicMaterial({ color: 0x8f1148, wireframe: true, transparent: true, opacity: 0.55 }));
     const coreGeo = new THREE.IcosahedronGeometry(0.55, 1);
-    const core = new THREE.Mesh(coreGeo, new THREE.MeshBasicMaterial({ color: 0xff7a1a, wireframe: true }));
+    const core = new THREE.Mesh(coreGeo, new THREE.MeshBasicMaterial({ color: 0xe0568c, wireframe: true }));
     world.add(knot, core);
 
     const glowCanvas = document.createElement('canvas');
     glowCanvas.width = glowCanvas.height = 128;
     const g = glowCanvas.getContext('2d');
     const grad = g.createRadialGradient(64, 64, 0, 64, 64, 64);
-    grad.addColorStop(0, 'rgba(255,122,26,.85)');
-    grad.addColorStop(0.35, 'rgba(229,48,31,.32)');
-    grad.addColorStop(1, 'rgba(229,48,31,0)');
+    grad.addColorStop(0, 'rgba(224,86,140,.8)');
+    grad.addColorStop(0.35, 'rgba(125,13,67,.4)');
+    grad.addColorStop(1, 'rgba(125,13,67,0)');
     g.fillStyle = grad;
     g.fillRect(0, 0, 128, 128);
     const glowTex = new THREE.CanvasTexture(glowCanvas);
@@ -196,7 +196,7 @@ export default function HeroScene({ items, onPick }) {
         const on = m === hovered;
         const s = m.userData.pivot.scale.x;
         m.userData.pivot.scale.setScalar(s + ((on ? 1.14 : 1) - s) * Math.min(dt * 8, 1));
-        m.userData.frameMat.color.setHex(on ? 0xff7a1a : 0xe5301f);
+        m.userData.frameMat.color.setHex(on ? 0xe0568c : 0x8f1148);
       });
 
       renderer.render(scene, camera);
