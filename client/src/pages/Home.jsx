@@ -48,8 +48,8 @@ export default function Home() {
           <HeroScene items={RING_ITEMS} onPick={(v) => navigate(`/watch/${v.id}`)} />
         </Suspense>
         <div className="hero-copy">
-          <span className="pill">Unfiltered. Untold. Unmissable.</span>
           <h1>Stories<br /><span>Pakistan doesn't</span><br />tell.</h1>
+          <p className="hero-tagline">Unfiltered. Untold. Unmissable.</p>
           <p className="hero-sub">Documentaries, podcasts and Shorts on crime, power, history and the economy, told without the filter.</p>
           <div className="hero-actions">
             <Link className="btn btn-primary" to="/videos"><Icon name="play" /> Start watching <GoArrow /></Link>
