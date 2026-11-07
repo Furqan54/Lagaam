@@ -11,12 +11,11 @@ const PALETTE = [
 
 const RIBBONS = 10;
 const SCALE = 0.5;    // the glow is soft anyway: draw at half size and let CSS stretch it, 4x fewer pixels
-const FRAME_MS = 33;  // about 30fps is plenty for slow drifting light
 const rand = (a, b) => a + Math.random() * (b - a);
 
 /**
  * Fixed, full-page background of slow flowing light ribbons.
- * It sits behind all content (z-index -1), drifts with scroll for depth, pauses when the tab is hidden,
+ * It sits behind all content (z-index -1), animates on time alone (independent of scrolling), pauses when the tab is hidden,
  * and renders a single still frame for people who prefer reduced motion.
  */
 export default function WaveBackground() {
@@ -39,12 +38,7 @@ export default function WaveBackground() {
       color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
     }));
 
-    let w = 0, h = 0, raf = 0, last = 0, t = 0, scrolling = false, idle = 0;
-    const onScroll = () => {
-      scrolling = true;
-      clearTimeout(idle);
-      idle = setTimeout(() => { scrolling = false; }, 140);
-    };
+    let w = 0, h = 0, raf = 0, last = 0, t = 0;
 
     const resize = () => {
       w = window.innerWidth; h = window.innerHeight;
@@ -62,10 +56,9 @@ export default function WaveBackground() {
     const draw = () => {
       ctx.clearRect(0, 0, w, h);
       ctx.globalCompositeOperation = 'lighter';
-      const scroll = window.scrollY;
-      const span = h + 240;
       for (const r of ribbons) {
-        const baseY = ((((r.lane * h * 1.15) - scroll * 0.09 * r.depth) % span) + span) % span - 120;
+        // motion depends on time only, never on scroll, so scrolling can't make it jump
+        const baseY = r.lane * h * 1.1 + Math.sin(t * 0.12 * r.depth + r.phase) * 70;
         // a wide faint pass for the glow and a thin bright core
         for (const [lw, a] of [[r.width * 6, 0.3], [r.width, 1]]) {
           ctx.beginPath();
@@ -83,7 +76,6 @@ export default function WaveBackground() {
 
     const loop = (now) => {
       raf = requestAnimationFrame(loop);
-      if (now - last < FRAME_MS || scrolling) return; // never compete with scrolling for the frame
       const dt = Math.min((now - last) / 1000, 0.05);
       last = now; t += dt;
       draw();
@@ -98,12 +90,9 @@ export default function WaveBackground() {
     draw(); // first frame straight away
     if (!reduced) raf = requestAnimationFrame((n) => { last = n; loop(n); });
     window.addEventListener('resize', resize);
-    window.addEventListener('scroll', onScroll, { passive: true });
     document.addEventListener('visibilitychange', onVisibility);
     return () => {
       cancelAnimationFrame(raf);
-      clearTimeout(idle);
-      window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', onVisibility);
     };
