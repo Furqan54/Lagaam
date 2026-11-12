@@ -1,0 +1,22 @@
+{
+  "name": "lagaam-client",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lagaam website front end (React). The Express + MongoDB side of the MERN stack comes later.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.2.1",
+    "vite": "^8.3.5"
+  }
+}
