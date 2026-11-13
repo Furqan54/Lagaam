@@ -1,31 +1,12 @@
 {
   "name": "lagaam",
-  "version": "1.0.0",
-  "description": "Lagaam landing page by MediaBuzz Global",
+  "private": true,
+  "description": "Lagaam website: React client now, Express and MongoDB server to follow",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Furqan54/Lagaam.git"
-  },
-  "keywords": [
-    "lagaam",
-    "mediabuzz",
-    "landing-page"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Furqan54/Lagaam/issues"
-  },
-  "homepage": "https://github.com/Furqan54/Lagaam#readme",
-  "devDependencies": {
-    "vite": "^7.0.0"
-  },
-  "dependencies": {
-    "three": "^0.187.0"
-  }
+  "repository": { "type": "git", "url": "git+https://github.com/Furqan54/Lagaam.git" },
+  "license": "ISC"
 }
