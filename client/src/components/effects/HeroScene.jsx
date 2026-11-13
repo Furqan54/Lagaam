@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { thumb } from '../data/data.js';
+import { thumb } from '../../data/data.js';
 
 /**
  * Home hero: a rotating ring of real video thumbnails around a glowing wireframe knot.

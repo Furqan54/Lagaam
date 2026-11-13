@@ -1,5 +1,5 @@
 import { createContext, useEffect, useRef, useState } from 'react';
-import { getVideo, previewRange } from '../data/data.js';
+import { getVideo, previewRange } from '../../data/data.js';
 
 /** Lets a card's thumbnail know when to show the hover preview iframe. */
 export const CardContext = createContext({ frameSrc: null, onFrameLoad: () => {} });

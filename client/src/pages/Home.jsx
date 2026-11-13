@@ -1,19 +1,19 @@
 import { lazy, Suspense } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { byType, thumb, stats, TOPICS } from '../data/data.js';
-import Icon from '../components/Icon.jsx';
-import Reveal from '../components/Reveal.jsx';
-import Counter from '../components/Counter.jsx';
-import TiltCard from '../components/TiltCard.jsx';
-import CtaBand from '../components/CtaBand.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import Counter from '../components/ui/Counter.jsx';
+import TiltCard from '../components/ui/TiltCard.jsx';
+import CtaBand from '../components/ui/CtaBand.jsx';
 import useRail from '../hooks/useRail.js';
-import { RailButtons, RailTrack } from '../components/Rail.jsx';
-import { FeatureCard, MiniCard, VideoCard, ShortCard, EpisodeRow } from '../components/VideoCards.jsx';
-import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
+import { RailButtons, RailTrack } from '../components/ui/Rail.jsx';
+import { FeatureCard, MiniCard, VideoCard, ShortCard, EpisodeRow } from '../components/video/VideoCards.jsx';
+import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 // Three.js is the heaviest dependency, so the 3D hero loads in its own chunk instead of the main bundle.
-const HeroScene = lazy(() => import('../components/HeroScene.jsx'));
+const HeroScene = lazy(() => import('../components/effects/HeroScene.jsx'));
 
 const docs = byType('doc');
 const featuredDocs = docs.filter((v) => v.featured);

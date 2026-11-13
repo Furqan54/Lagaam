@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { thumb, thumbSmall, watchHref, TYPE_LABEL } from '../data/data.js';
-import Icon from './Icon.jsx';
-import Reveal from './Reveal.jsx';
-import TiltCard, { CardContext } from './TiltCard.jsx';
-import { SUBSCRIBE_HREF } from './Subscribe.jsx';
+import { thumb, thumbSmall, watchHref, TYPE_LABEL } from '../../data/data.js';
+import Icon from '../ui/Icon.jsx';
+import Reveal from '../ui/Reveal.jsx';
+import TiltCard, { CardContext } from '../ui/TiltCard.jsx';
+import { SUBSCRIBE_HREF } from '../ui/Subscribe.jsx';
 
 /** Thumbnail with a small glass play button in the middle. The hover preview iframe mounts in .preview-layer. */
 function Media({ v, small = false }) {

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CHANNEL } from '../data/data.js';
-import Icon from '../components/Icon.jsx';
-import Reveal from '../components/Reveal.jsx';
-import PageHero from '../components/PageHero.jsx';
-import { SubscribeStrip } from '../components/Subscribe.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import PageHero from '../components/ui/PageHero.jsx';
+import { SubscribeStrip } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 const TOPICS = ['Collaboration', 'Sponsorship', 'Guest or story idea', 'Feedback', 'Something else'];

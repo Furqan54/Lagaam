@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout.jsx';
-import Intro from './components/Intro.jsx';
+import Layout from './components/layout/Layout.jsx';
+import Intro from './components/effects/Intro.jsx';
 import Home from './pages/Home.jsx';
 import Videos from './pages/Videos.jsx';
 import Documentaries from './pages/Documentaries.jsx';

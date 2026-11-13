@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { intro } from '../lib/intro.js';
+import { intro } from '../../lib/intro.js';
 
 /** Fades and lifts its content in the first time it scrolls into view. `i` staggers siblings. */
 export default function Reveal({ as: Tag = 'div', i = 0, className = '', style, children, ...rest }) {

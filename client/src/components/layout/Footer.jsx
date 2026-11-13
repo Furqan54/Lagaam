@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { CHANNEL } from '../data/data.js';
-import Icon from './Icon.jsx';
-import { Logo, CyberXMark } from './Logo.jsx';
+import { CHANNEL } from '../../data/data.js';
+import Icon from '../ui/Icon.jsx';
+import { Logo, CyberXMark } from '../ui/Logo.jsx';
 
 const external = { target: '_blank', rel: 'noopener noreferrer' };
 

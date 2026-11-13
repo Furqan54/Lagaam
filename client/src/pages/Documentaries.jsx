@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import { byType, TOPICS, topicBlurb } from '../data/data.js';
-import Icon, { TOPIC_ICON } from '../components/Icon.jsx';
-import Reveal from '../components/Reveal.jsx';
-import PageHero from '../components/PageHero.jsx';
-import CtaBand from '../components/CtaBand.jsx';
+import Icon, { TOPIC_ICON } from '../components/ui/Icon.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import PageHero from '../components/ui/PageHero.jsx';
+import CtaBand from '../components/ui/CtaBand.jsx';
 import useRail from '../hooks/useRail.js';
-import { RailButtons, RailTrack } from '../components/Rail.jsx';
-import { VideoCard, FeatureCard, MiniCard } from '../components/VideoCards.jsx';
-import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
+import { RailButtons, RailTrack } from '../components/ui/Rail.jsx';
+import { VideoCard, FeatureCard, MiniCard } from '../components/video/VideoCards.jsx';
+import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 const docs = byType('doc');

@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { CHANNEL, stats, sisterChannels, videos, thumb, watchHref } from '../data/data.js';
-import Icon from '../components/Icon.jsx';
-import Reveal from '../components/Reveal.jsx';
-import Counter from '../components/Counter.jsx';
-import TiltCard from '../components/TiltCard.jsx';
-import PageHero from '../components/PageHero.jsx';
-import CtaBand from '../components/CtaBand.jsx';
-import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import Counter from '../components/ui/Counter.jsx';
+import TiltCard from '../components/ui/TiltCard.jsx';
+import PageHero from '../components/ui/PageHero.jsx';
+import CtaBand from '../components/ui/CtaBand.jsx';
+import { SubscribeButton, SubscribeStrip, CenterCta } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 const by = (fn) => videos.filter(fn);

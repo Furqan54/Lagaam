@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from 'react';
-import { intro } from '../lib/intro.js';
+import { intro } from '../../lib/intro.js';
 
 const format = (n, decimals) =>
   n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });

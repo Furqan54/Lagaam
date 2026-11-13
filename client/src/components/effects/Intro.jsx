@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { introActive, finishIntro } from '../lib/intro.js';
-import { Logo } from './Logo.jsx';
+import { introActive, finishIntro } from '../../lib/intro.js';
+import { Logo } from '../ui/Logo.jsx';
 
 const MIN_MS = 1900;   // the intro always lasts at least this long
 const MAX_MS = 3600;   // and never longer, even if fonts are slow

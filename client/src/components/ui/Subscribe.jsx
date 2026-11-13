@@ -1,4 +1,4 @@
-import { CHANNEL } from '../data/data.js';
+import { CHANNEL } from '../../data/data.js';
 import Icon from './Icon.jsx';
 import Reveal from './Reveal.jsx';
 

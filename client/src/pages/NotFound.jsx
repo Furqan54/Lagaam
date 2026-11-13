@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Icon from '../components/Icon.jsx';
+import Icon from '../components/ui/Icon.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 export default function NotFound() {

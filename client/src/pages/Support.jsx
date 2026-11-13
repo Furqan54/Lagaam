@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { CHANNEL } from '../data/data.js';
-import Icon from '../components/Icon.jsx';
-import Reveal from '../components/Reveal.jsx';
-import TiltCard from '../components/TiltCard.jsx';
-import { DecodeNumber } from '../components/Counter.jsx';
-import PageHero from '../components/PageHero.jsx';
-import CtaBand from '../components/CtaBand.jsx';
-import { SUBSCRIBE_HREF, SubscribeStrip, CenterCta } from '../components/Subscribe.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import TiltCard from '../components/ui/TiltCard.jsx';
+import { DecodeNumber } from '../components/ui/Counter.jsx';
+import PageHero from '../components/ui/PageHero.jsx';
+import CtaBand from '../components/ui/CtaBand.jsx';
+import { SUBSCRIBE_HREF, SubscribeStrip, CenterCta } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 const external = { target: '_blank', rel: 'noopener noreferrer' };

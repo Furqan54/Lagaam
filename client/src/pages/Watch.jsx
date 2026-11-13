@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { CHANNEL, getVideo, related, youtubeUrl, thumb, previewRange, TYPE_LABEL } from '../data/data.js';
-import Icon from '../components/Icon.jsx';
-import { EpisodeRow } from '../components/VideoCards.jsx';
-import { SUBSCRIBE_HREF } from '../components/Subscribe.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import { EpisodeRow } from '../components/video/VideoCards.jsx';
+import { SUBSCRIBE_HREF } from '../components/ui/Subscribe.jsx';
 import useTitle from '../hooks/useTitle.js';
 
 const SECTION = {

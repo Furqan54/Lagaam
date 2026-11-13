@@ -1,4 +1,4 @@
-import logo from '../assets/lagaam-logo.png';
+import logo from '../../assets/lagaam-logo.png';
 
 /** The real Lagaam logo on a light plate (the artwork is dark burgundy, so it needs a light surface on the dark theme). */
 export function Logo() {

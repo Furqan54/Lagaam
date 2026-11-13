@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Icon from './Icon.jsx';
-import { Logo } from './Logo.jsx';
-import { SubscribeButton } from './Subscribe.jsx';
+import Icon from '../ui/Icon.jsx';
+import { Logo } from '../ui/Logo.jsx';
+import { SubscribeButton } from '../ui/Subscribe.jsx';
 
 const VIDEO_PATHS = ['/videos', '/documentaries', '/podcasts', '/shorts'];
 

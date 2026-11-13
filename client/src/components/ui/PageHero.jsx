@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { videos, thumb } from '../data/data.js';
+import { videos, thumb } from '../../data/data.js';
 import Icon from './Icon.jsx';
 
 /**
